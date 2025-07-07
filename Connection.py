@@ -7,5 +7,5 @@ class Connection():
             password='levi123',
             host='localhost',
             port='5432',
-            database='gamesDB'
+            database='gamesDB2'
         )
