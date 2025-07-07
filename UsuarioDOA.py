@@ -40,6 +40,7 @@ class UsuarioDAO:
                 cursor.close()
                 connection.close()
         return sucess
+
     
     def atualizarUsuario(self, nome, email, senha):
         sucess = False
