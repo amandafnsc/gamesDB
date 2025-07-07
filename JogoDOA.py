@@ -142,7 +142,7 @@ class JogoDOA:
         try:
             connection = Connection.getConnection()
             cursor = connection.cursor()
-            cursor.execute("DELETE jogo WHERE id = '{}')".format(id))
+            cursor.execute("DELETE FROM jogo WHERE id = %s", (id,))
             connection.commit()
             if cursor.rowcount == 1:
                 sucess = True
@@ -154,7 +154,7 @@ class JogoDOA:
                 connection.close()
         return sucess
     
-    def buscarJogoPorNome(nome):
+    def buscarJogoPorNome(self, nome):
         resultado = []
         try:
             connection = Connection.getConnection()
@@ -191,7 +191,7 @@ class JogoDOA:
         return resultado
 
     
-    def buscarJogoPorCategoria(categoria):
+    def buscarJogoPorCategoria(self, categoria):
         resultado = []
         try:
             connection = Connection.getConnection()
@@ -229,7 +229,7 @@ class JogoDOA:
     
 
     
-    def buscarJogoPorEditora(editora):
+    def buscarJogoPorEditora(self, editora):
         resultado = []
         try:
             connection = Connection.getConnection()

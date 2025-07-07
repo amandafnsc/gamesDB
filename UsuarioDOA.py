@@ -9,12 +9,13 @@ class UsuarioDAO:
         try:
             connection = Connection.getConnection()
             cursor = connection.cursor()
-            cursor.execute("SELECT id, nome FROM usuario")
+            cursor.execute("SELECT id, nome, email FROM usuario")
             registros = cursor.fetchall()
             for linha in registros:
                 u = Usuario()
                 u.id = linha[0]
                 u.nome = linha[1]
+                u.email= linha[2]
                 resultado.append(u)
         except (Exception, psycopg2.Error) as error:
             traceback.print_exc()
@@ -64,7 +65,7 @@ class UsuarioDAO:
         try:
             connection = Connection.getConnection()
             cursor = connection.cursor()
-            cursor.execute("DELETE usuario WHERE id = '{}')".format(id))
+            cursor.execute("DELETE FROM usuario WHERE id = %s", (id,))
             connection.commit()
             if cursor.rowcount == 1:
                 sucess = True       

@@ -5,37 +5,37 @@ Duas operação de atualização (UPDATE)
 Duas operação de remoção (DELETE)
 
 SELECT
-Listar Jogos ✅✅
+Listar Jogos ✅✅✅
 	Lista todos os jogos adicionados no Banco (Apenas Nome)
-Lista Usuários ✅✅
+Lista Usuários ✅✅✅
 	Lista todos os usuários no Banco (Nome e Email)
-Buscar Jogo por Nome ✅✅
+Buscar Jogo por Nome ✅✅✅
 	Buscar por nome específico do Jogo (Retorna Informações)
-Buscar Jogo por Categoria ✅
+Buscar Jogo por Categoria ✅✅✅
 	Lista todos os jogos naquela categoria (Nome e Editora)
-Buscar Jogo por Editora ✅
+Buscar Jogo por Editora ✅✅✅
 	Lista os jogos da editor (Apenas nome)
 Listar Aquisições (OPCIONAL)
 
 INSERT
-Adicionar Jogo ✅✅
+Adicionar Jogo ✅✅✅
 	Adiciona novo jogo
-Adicionar Usuário ✅✅
+Adicionar Usuário ✅✅✅
 	Adiciona novo usuário
 Adicionar Aquisição
 	Relaciona jogo à usuário
 
 UPDATE
-Atualizar Jogo ✅
+Atualizar Jogo ✅✅✅
 	Atualiza dados do Jogo
-Atualizar Usuário ✅
+Atualizar Usuário ✅✅✅
 	Atualiza dados do Usuário
 Atualizar Aquisição (OPCIONAL)
 
 DELETE
-Deletar Jogo ✅
+Deletar Jogo ✅✅✅
 	Deleta dados do Jogo
-Deletar Usuário ✅
+Deletar Usuário ✅✅✅
 	Deleta dados do usuário
 Deletar Aquisição (OPCIONAL)
 

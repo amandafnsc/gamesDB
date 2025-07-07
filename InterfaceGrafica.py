@@ -79,7 +79,7 @@ class InterfaceGrafica:
         encontrou = False
         for p in pessoas:
             encontrou = True
-            print("Id = {} - Nome = {} - Login = {}".format(p.id, p.nome,p.login))
+            print("Id = {} - Nome = {} - Email = {}".format(p.id, p.nome,p.email))
         if not encontrou:
             print ('Nenhum Registro Encontrado')
         self.menu_principal
@@ -91,8 +91,8 @@ class InterfaceGrafica:
         encontrou = False
         for j in jogos:
             encontrou = True
-            print("Id = {} - Nome = {} - Categoria = {} - Descrição = {} - Duração = {} - Tipo = {} - Min Jogadores = {} - Max Jogadores = {}".format(
-                j.id, j.nome, j.categoria, j.descricao, j.duracao, j.tipo, j.min_jogadores, j.max_jogadores))
+            print("Id = {} - Nome = {} - Categoria = {} - Idioma = {} - Editora = {} - Descrição = {} - Duração = {} - Tipo = {} - Min Jogadores = {} - Max Jogadores = {}".format(
+                j.id, j.nome, j.categoria, j.idioma, j.editora, j.descricao, j.duracao, j.tipo, j.min_jogadores, j.max_jogadores))
         if not encontrou:
             print ('Nenhum Registro Encontrado')
         self.menu_principal()
@@ -104,8 +104,8 @@ class InterfaceGrafica:
         encontrou = False
         for j in jogos:
             encontrou = True
-            print("Id = {} - Nome = {} - Categoria = {} - Descrição = {} - Duração = {} - Tipo = {} - Min Jogadores = {} - Max Jogadores = {}".format(
-                j.id, j.nome, j.categoria, j.descricao, j.duracao, j.tipo, j.min_jogadores, j.max_jogadores))
+            print("Id = {} - Nome = {} - Categoria = {} - Idioma = {} - Editora = {} - Descrição = {} - Duração = {} - Tipo = {} - Min Jogadores = {} - Max Jogadores = {}".format(
+                j.id, j.nome, j.categoria, j.idioma, j.editora, j.descricao, j.duracao, j.tipo, j.min_jogadores, j.max_jogadores))
         if not encontrou:
             print ('Nenhum Registro Encontrado')
         self.menu_principal()
@@ -142,8 +142,8 @@ class InterfaceGrafica:
         encontrou = False
         for j in jogos:
             encontrou = True
-            print("Id = {} - Nome = {} - Categoria = {} - Descrição = {} - Duração = {} - Tipo = {} - Min Jogadores = {} - Max Jogadores = {}".format(
-                j.id, j.nome, j.categoria, j.descricao, j.duracao, j.tipo, j.min_jogadores, j.max_jogadores))
+            print("Id = {} - Nome = {} - Categoria = {} - Idioma = {} - Editora = {} - Descrição = {} - Duração = {} - Tipo = {} - Min Jogadores = {} - Max Jogadores = {}".format(
+                j.id, j.nome, j.categoria, j.idioma, j.editora, j.descricao, j.duracao, j.tipo, j.min_jogadores, j.max_jogadores))
         if not encontrou:
             print ('Nenhum Registro Encontrado')
         self.menu_principal()
@@ -203,14 +203,15 @@ class InterfaceGrafica:
         dao = JogoDOA()
         id = input ("Id do Jogo:")
         nome = input ("Nome do Jogo:")
-        descricao = input ("Descrição do Jogo:")   
+        descricao = input ("Descrição do Jogo:")
+        idioma = input ("Idioma do Jogo:")
         duracao = input ("Duração do Jogo:")
         tipo = input ("Tipo do Jogo:")
         min_jogadores = input ("Número Mínimo de Jogadores:")
         max_jogadores = input ("Número Máximo de Jogadores:")
         nome_categoria = input ("Nome da Categoria:")
         nome_editora = input ("Nome da Editora:")
-        sucess = dao.atualizarJogo(id, nome, descricao, duracao, tipo, min_jogadores, max_jogadores, nome_categoria, nome_editora)
+        sucess = dao.atualizarJogo(id, nome, descricao,idioma, duracao, tipo, min_jogadores, max_jogadores, nome_categoria, nome_editora)
         if sucess:
             print ("Jogo Atualizado Com Sucesso!")
         else:
