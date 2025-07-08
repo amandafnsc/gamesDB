@@ -1,5 +1,5 @@
 import JogoDOA
-from Usuario import Usuario
+from Jogo_UsuarioDOA import JogoUsuarioDOA
 from UsuarioDOA import UsuarioDAO
 from JogoDOA import JogoDOA
 from Jogo import Jogo
@@ -47,7 +47,7 @@ class InterfaceGrafica:
             elif opcao == 2:
                 self.menuInserirUser()
             elif opcao == 3:
-                self.registrar_aquisicao()
+                self.menuRegistrarAquisicao()
             elif opcao == 4:
                 self.menuListarTodosJogos()
             elif opcao == 5:
@@ -216,6 +216,22 @@ class InterfaceGrafica:
             print ("Jogo Atualizado Com Sucesso!")
         else:
             print ("Erro ao Atualizar o Jogo")
+        self.menu_principal()
+    
+    def menuRegistrarAquisicao(self):
+        dao = JogoUsuarioDOA()
+        jogo_id = input("Digite o Nome do jogo: ")
+        usuario_id = input("Digite o ID do usuário: ")
+        local = input("Digite o local de aquisição: ")
+        data_aquisicao = input("Digite a data de aquisição (DD-MM-YYYY): ")
+        status = input("Digite o status da aquisição (ativo/inativo): ")
+
+        sucesso = dao.registrarAquisicao(usuario_id, jogo_id, local, data_aquisicao, status)
+        if sucesso:
+            print("Aquisição registrada com sucesso!")
+        else:
+            print("Erro ao registrar a aquisição.")
+        
         self.menu_principal()
 
 
