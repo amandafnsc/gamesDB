@@ -43,12 +43,12 @@ class UsuarioDAO:
         return sucess
 
     
-    def atualizarUsuario(self, nome, email, senha):
+    def atualizarUsuario(self, nome, email, senha, id):
         sucess = False
         try:
             connection = Connection.getConnection()
             cursor = connection.cursor()
-            cursor.execute("UPDATE usuario SET nome = '{}', login = '{}', senha = '{}')".format(nome, email, senha))
+            cursor.execute("UPDATE usuario SET nome = '{}', email = '{}', senha = '{}' WHERE id = {}".format(nome, email, senha, int(id)))
             connection.commit()
             if cursor.rowcount == 1:
                 sucess = True       

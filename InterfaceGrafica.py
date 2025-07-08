@@ -192,7 +192,7 @@ class InterfaceGrafica:
         nome = input ("Nome do Usuário:")
         email = input ("Email do Usuário:")
         senha = input ("Senha do Usuário:")
-        sucess = dao.atualizarUsuario(id, nome, email, senha)
+        sucess = dao.atualizarUsuario( nome, email, senha,id )
         if sucess:
             print ("Usuário Atualizado Com Sucesso!")
         else:

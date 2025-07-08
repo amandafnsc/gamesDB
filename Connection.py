@@ -4,7 +4,7 @@ class Connection():
     def getConnection():
             return psycopg2.connect(
             user='postgres',
-            password='levi123',
+            password='090405',
             host='localhost',
             port='5432',
             database='gamesDB2'
